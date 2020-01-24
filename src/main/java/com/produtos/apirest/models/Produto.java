@@ -23,7 +23,7 @@ public class Produto  implements Serializable{
 	
 	private String nome;
 	
-	private BigDecimal quatidade;
+	private BigDecimal quantidade;
 	
 	private BigDecimal valor;
 
@@ -44,12 +44,12 @@ public class Produto  implements Serializable{
 		this.nome = nome;
 	}
 
-	public BigDecimal getQuatidade() {
-		return quatidade;
+	public BigDecimal getQuantidade() {
+		return quantidade;
 	}
 
-	public void setQuatidade(BigDecimal quatidade) {
-		this.quatidade = quatidade;
+	public void setQuantidade(BigDecimal quantidade) {
+		this.quantidade = quantidade;
 	}
 
 	public BigDecimal getValor() {
