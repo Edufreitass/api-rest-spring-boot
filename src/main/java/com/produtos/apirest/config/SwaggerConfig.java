@@ -32,6 +32,7 @@ public class SwaggerConfig {
 				.apiInfo(metaInfo());
 	}
 
+	// Informações da API
 	private ApiInfo metaInfo() {
 		ApiInfo apiInfo = new ApiInfo("Produtos API REST", // nome da api
 				"API REST de cadastro de produtos", // descrição da api
