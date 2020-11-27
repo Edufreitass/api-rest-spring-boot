@@ -1,4 +1,4 @@
-package com.produtos.apirest.models;
+package com.produtos.apirest.domain.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -10,29 +10,30 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TB_PRODUTO")
-public class Produto  implements Serializable{
-
-	// Atributo gerado pelo Serializable
+@Table(name = "tb_produto")
+public class Produto implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	// Atributos da classe Produto
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO) // Gera os Id no banco de dados automaticamente
-	private long id;
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
 	private String nome;
-	
 	private BigDecimal quantidade;
-	
 	private BigDecimal valor;
 
-	// Métodos Getters e Setters
-	public long getId() {
+	public Produto() {
+	}
+
+	public Produto(Produto obj) {
+		this();
+	}
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -59,6 +60,5 @@ public class Produto  implements Serializable{
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
-	
-	
+
 }
